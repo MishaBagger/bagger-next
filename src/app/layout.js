@@ -1,5 +1,5 @@
 import { Geist_Mono } from "next/font/google";
-import "./scss/globals.css";
+import "../scss/globals.css";
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
