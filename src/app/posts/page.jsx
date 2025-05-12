@@ -1,21 +1,12 @@
-import { fetchData } from "@/utils/fetchData";
-import Link from "next/link";
+import PostSearch from '@/components/UI/PostSearch'
+import { fetchData } from '@/utils/fetchData'
 
-export default async function page() {
-    
-    const test = await fetchData()
+export default async function Posts() {
+    const posts = await fetchData()
     return (
         <>
-            <h1>page</h1>
-            <div className="post">
-            {test.map((post) => (
-                <div key={post.id} className="post__container">
-                    <p className="text">{post.title}</p>
-                    <p className="text">{post.body}</p>
-                    <Link href={`/posts/${post.id}`}>Детальнее</Link>
-                </div>
-            ))}
-            </div>
+            <h1>Posts page</h1>
+            <PostSearch initialPosts={posts} />
         </>
     )
 }

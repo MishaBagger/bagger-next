@@ -1,5 +1,6 @@
 import { Geist_Mono } from "next/font/google";
 import "../scss/globals.css";
+import Header from "@/components/Header";
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
@@ -14,6 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={geistMono.className}>
+          <Header />
+
         {children}
       </body>
     </html>

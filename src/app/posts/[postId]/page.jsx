@@ -1,6 +1,8 @@
 import { fetchData, fetchPost } from '@/utils/fetchData'
 import Post from '@/components/UI/Post'
 
+export const revalidate = 10;
+
 export async function generateMetadata({ params, searchParams }) {
     const { postId } = await params
     const post = await fetchPost(postId)
@@ -12,7 +14,6 @@ export async function generateMetadata({ params, searchParams }) {
 
 export async function generateStaticParams() {
     const posts = await fetchData()
-
     return posts.map((post) => ({
         postId: String(post.id),
     }))
