@@ -20,3 +20,32 @@ a {
         box-shadow: 1px 1px 4px 4px #9d9d9d;
     }
 }
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.btn {
+    color: #fff;
+    background-color: #757575;
+    transition: background-color .5s ease;
+    cursor: pointer;
+
+    &:hover {
+    background-color: #9f2525;
+    }
+}
