@@ -1,19 +1,25 @@
 {
-  "name": "bagger-next",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "framer-motion": "^12.11.3",
-    "next": "15.3.2",
-    "next-auth": "^4.24.11",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sass": "^1.88.0"
-  }
+    "name": "bagger-next",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@prisma/client": "^6.8.2",
+        "framer-motion": "^12.11.3",
+        "next": "15.3.2",
+        "next-auth": "^4.24.11",
+        "prisma": "^6.8.2",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "sass": "^1.88.0",
+        "sqlite3": "^5.1.7"
+    },
+    "prisma": {
+        "seed": "node prisma/seeds.js"
+    }
 }
